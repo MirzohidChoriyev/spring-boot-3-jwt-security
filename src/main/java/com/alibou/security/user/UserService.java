@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import java.security.Principal;
 
 @Service
@@ -28,7 +27,6 @@ public class UserService {
 
         // update the password
         user.setPassword(passwordEncoder.encode(request.getNewPassword()));
-
         // save the new password
         repository.save(user);
     }
